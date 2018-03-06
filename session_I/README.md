@@ -13,9 +13,9 @@ Topics
  * random number generation
  * Numpy broadcasting (working with large arrays in no time)
 
+-------
 
-
-Let's break down the things we discussed. First, we discussed these nested for loops: 
+First, we discussed these nested for loops: 
 
     for trace in range(0,len(mseedfiles)):
         for trace2 in range(0,len(mseedfiles)):
