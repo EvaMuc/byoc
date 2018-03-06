@@ -8,7 +8,7 @@ I suggest to create a new directory with a dedicated `README.md` and (if needed)
 
 You can use `git` to clone this repository:
 
-    git clone git@github.com:HerrMuellerluedenscheid/byoc.git
+    git clone git@https://github.com/HerrMuellerluedenscheid/byoc.git
 
 After that you can update the content from inside that directory:
 
