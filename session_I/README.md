@@ -88,7 +88,7 @@ import random, time
 
 start_time = time.time()
 
-output = np.zeros((len(val_list),len(val_list)))
+output = np.zeros((len(val_list), len(val_list)))
 
 cat_list = range(len(val_list))
 
@@ -103,16 +103,16 @@ for i in cat_list:
 print 'Time: %.6f' % (time.time() - start_time)
 ```
 
-For random number generation we switch to a much faster numpy function with only slightly changes in syntax
+For random number generation we switch to a much faster numpy function with only slight changes in syntax
 ```
-values = np.random.randint(1,101,25000)
+values = np.random.randint(1, 101, 25000)
 ```
 
 ... and instead of iterating over all values twice we will use numpy's matrix broadcasting:
 
 At first we convert the values given as a row vector into a column vector. This is done by adding a new axis:
 ```
-values[:,np.newaxis]
+values[:, np.newaxis]
 ```
 
 Now we add up both vectors and devide all values by 2:
@@ -123,9 +123,9 @@ Wait! Did we just add a column vector to a row vector? Yes, we did. Though, in t
 
 See this example:
 ```
-          [1]   [[1,2,3]]   [[1,1,1]]   [[2,3,4]]
-[1,2,3] + [2] = [[1,2,3]] + [[2,2,2]] = [[3,4,5]]
-          [3]   [[1,2,3]]   [[3,3,3]]   [[4,5,6]]
+          [1]   [[1, 2, 3]]   [[1, 1, 1]]   [[2, 3, 4]]
+[1, 2, 3] + [2] = [[1, 2, 3]] + [[2, 2, 2]] = [[3, 4, 5]]
+          [3]   [[1, 2, 3]]   [[3, 3, 3]]   [[4, 5, 6]]
 ```
 
 
@@ -136,16 +136,16 @@ import time
 
 start_time = time.time()
 
-values = np.random.randint(1,101,25)
+values = np.random.randint(1, 101, 25)
 
-output = (values + values[:,np.newaxis])/2.
+output = (values + values[:, np.newaxis])/2.
 
-print 'Time: %.6f' % (time.time() - start_time)
+print('Time: %.6f' % (time.time() - start_time))
 ```  
 
 By two small changes we made our example code running about 25 times faster.
 
-### Suggested Homework:
+### Try yourself:
  * install `flake8`. Might work like this:
 
     python -m pip install flake8
