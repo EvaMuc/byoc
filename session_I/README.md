@@ -145,6 +145,9 @@ print('Time: %.6f' % (time.time() - start_time))
 
 By two small changes we made our example code running about 25 times faster.
 
+Take home message to remember when working with numbers: Avoid python lists like the plague, use Numpy arrays instead!
+
+
 ### Try yourself:
  * install `flake8`. Might work like this:
 
