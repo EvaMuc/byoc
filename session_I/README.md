@@ -15,7 +15,7 @@ Topics
 
 -------
 
-###Nested for loops
+### Nested for loops
 
 First, we discussed these nested for loops: 
 
@@ -41,7 +41,7 @@ A better solution would be:
         for ib, btrace in enumerate(mseedfiles):
             [ ... ]
 
-###Style conventions
+### Style conventions
 
 Another line we discussed:  
 
@@ -64,7 +64,7 @@ As you can see, PEP8 suggest to add whitespaces after each ',' and to keep lines
 
 Nice!
 
-###List comprehension
+### List comprehension
 
 Finally, we discussed [list comprehension](http://www.pythonforbeginners.com/basics/list-comprehensions-in-python). In order to extract station codes from a list of stations you could do:
 
@@ -78,7 +78,7 @@ This does to job. But there is a more 'pythonic' way of doing it (which can be u
 
 It's not only more efficient but also saves 2 out of 3 lines of code which is good - your code becomes more easy to read!
 
-###Random number generation and numpy broadcasting
+### Random number generation and numpy broadcasting
 
 First let's have a look onto the ugly approach for calculating simple averages of random values:
 
@@ -145,7 +145,7 @@ print 'Time: %.6f' % (time.time() - start_time)
 
 By two small changes we made our example code running about 25 times faster.
 
-###Suggested Homework:
+### Suggested Homework:
  * install `flake8`. Might work like this:
 
     python -m pip install flake8
