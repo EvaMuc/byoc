@@ -13,7 +13,7 @@ Topics
 
 ### 'git' by example
 
-Let's work together on this project! And let's use 'git' for that! Here comes a step-by-step explanation how you can help to improve 'byoc' and best part is: You will become a 'git' expert at the same time!
+Let's work together on this project! And let's use `git` for that! Here comes a step-by-step explanation how you can help to improve 'byoc' and best part is: You will become a 'git' expert at the same time!
 
 #### Step 1:
 Create an account on github.com
@@ -22,7 +22,7 @@ Create an account on github.com
 Create a fork of [byoc](https://github.com/HerrMuellerluedenscheid/byoc) (click on "fork" in the upper right corner)
 
 #### Step 3:
-If you haven't cloned this repository yet, no is the time to do so. Checkout the top level page on how to do that [byoc](https://github.com/HerrMuellerluedenscheid/byoc).
+If you haven't cloned this repository yet, now is the time to do so. Checkout the top level page on how to do that [byoc](https://github.com/HerrMuellerluedenscheid/byoc).
 
 Now, you have to add the __remote__ link to the repository on your computer.To do that run something similar to this commant where XXXXXXXX is your account name:
 
@@ -36,15 +36,15 @@ Check your remote connections running:
 
 #### Step 4a:
 
-Now you are setup to work with git. Now, you should always pull the latest changes from the origin repository and possibly from your own if you are working on different computers. Just run the following:
+Now you are setup to work with git. Before you start working you should always pull the latest changes from the origin repository and possibly from your own if you are working on different computers. Just run the following:
 
     git pull origin master
 
 and possibly
 
-    git pull mygithub.master
+    git pull mygithub master
 
-to pull any changes.
+to pull any updates.
 
 #### Step 4:
 
@@ -54,17 +54,17 @@ Improve any of the files here, or create something...
 
 After you finished working and you think you are good to go, no matter if you changed 1 or 100 lines of code, run:
 
-    git add SomeFileNameYouChanged`
+    git add SomeFileNameYouChanged
 
-on the modified files.
+on the modified file(s). This can be a list of filenames!
 
 #### Step 6:
 
-run `git commit` and enter a short message on what you updated. 'git' may ask you to identify yourself now. Simply copy-paste what is suggested there and fill in you email and name.
+run `git commit` and enter a short message on what you updated. `git` may ask you to identify yourself now. Simply copy-paste what is suggested there and fill in your email and name.
 
 #### Step 7:
 
-Push your changes to your github repository:
+Push your changes to __your__ github repository:
 
     git push mygithub master
 
@@ -78,4 +78,4 @@ Thats it! You are a `git` expert! congratulations!
 
 ### Try yourself:
 
-    * try git on our little 'yield_or_return project'
+ * try git on our little 'yield_or_return project'
