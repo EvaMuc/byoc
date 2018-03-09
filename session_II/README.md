@@ -6,6 +6,34 @@ Topics
  * 'try-except-finally'
  * 'if __name__ == "__main__"'
  * opening files with 'with'
+
+### File handling
+There are two methods for 'correctly' handling file opening in python. The first uses the try-except-finally error handling introduced above.
+
+    try:
+        fid=open(file_name,'r')
+    except OSError as e:
+        print(e)
+    finally:
+        fid.close()
+
+The finally statement here means that no matter what the error is the file is always closed correctly.
+
+Alternatively, you can use a 'with' statement.
+
+    with open(file_name,'r') as fid:
+        # do stuff
+
+By using a 'with' statement you tell python that if there is an error when opening the file, close the file correctly BEFORE you die. 
+
+Neither method is better or worse than the other, although you may find one method works better in certain circumstances. As an example of reading all the lines from a file into a list and splitting the line into whitespace delimited sections.:
+
+    with open(file_name,'r') as fid:
+        lines=[line.split() for line in fid.readlines()]
+
+    for line in lines:
+        """Do stuff with your line"""
+
  * 'git init', 'git add', 'git commit', 'git push origin master'
  * 'return' vs 'yield'
 
