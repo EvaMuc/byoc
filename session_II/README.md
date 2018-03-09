@@ -31,6 +31,8 @@ Neither method is better or worse than the other, although you may find one meth
     with open(file_name,'r') as fid:
         lines=[line.split() for line in fid.readlines()]
 
+    for line in lines:
+        """Do stuff with your line"""
 
  * 'git init', 'git add', 'git commit', 'git push origin master'
  * 'return' vs 'yield'
