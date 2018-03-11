@@ -6,7 +6,7 @@ Topics
 
  * File handling: opening files with 'with'
  * 'git' by example: git init', 'git add', 'git commit', 'git push origin master'
- * 'if __name__ == "__main__"'
+ *  'if \_\_name\_\_ == "\_\_main\_\_"'
  * 'return' vs 'yield'
  * 'try-except-finally'
 
@@ -114,10 +114,10 @@ Thats it! You are a `git` expert! congratulations!
 
 
 
-### 'if __name__ == "__main__"'
+### 'if \_\_name\_\_ == "\_\_main\_\_"'
 In python, other .py-files can be imported as modules. Sometimes modules are imported from a file which contains not only function and class definitions, but also executable code. 
 
-When a python script is executed, its __name__ attribute is set to "__main__". If a script is imported to another script, the __name__ is instead set to the name of that script/module.
+When a python script is executed, its \_\_name\_\_ attribute is set to "\_\_main\_\_". If a script is imported to another script, the \_\_name\_\_ is instead set to the name of that script/module.
 
 By doing the "main check", it is ensured, that the executable code is only executed if the module is run as a program itself and not if the module is only imported to use the functions within another script.
 
