@@ -3,9 +3,13 @@ Date: 8.3.2018
 Topics
 ------
 
+
+ * File handling: opening files with 'with'
+ * 'git' by example: git init', 'git add', 'git commit', 'git push origin master'
+ *  'if \_\_name\_\_ == "\_\_main\_\_"'
+ * 'return' vs 'yield'
  * 'try-except-finally'
- * 'if __name__ == "__main__"'
- * opening files with 'with'
+
 
 ### File handling
 There are two methods for 'correctly' handling file opening in python. The first uses the try-except-finally error handling introduced above.
@@ -34,8 +38,7 @@ Neither method is better or worse than the other, although you may find one meth
     for line in lines:
         """Do stuff with your line"""
 
- * 'git init', 'git add', 'git commit', 'git push origin master'
- * 'return' vs 'yield'
+
 
 
 
@@ -107,3 +110,37 @@ Thats it! You are a `git` expert! congratulations!
 ### Try yourself:
 
  * try git on our little 'yield_or_return project'
+
+
+
+
+### 'if \_\_name\_\_ == "\_\_main\_\_"'
+In python, other .py-files can be imported as modules. Sometimes modules are imported from a file which contains not only function and class definitions, but also executable code. 
+
+When a python script is executed, its \_\_name\_\_ attribute is set to "\_\_main\_\_". If a script is imported to another script, the \_\_name\_\_ is instead set to the name of that script/module.
+
+By doing the "main check", it is ensured, that the executable code is only executed if the module is run as a program itself and not if the module is only imported to use the functions within another script.
+
+A small and simple example:
+
+File 1: adding_numbers.py
+
+
+    def sum_of_list(list_of_numbers):
+        result = 0
+        for number in list_of_numbers:
+            result += number
+        return result
+
+    if __name__ == '__main__':
+        print("Test: Sum of list [0,1,2,3,4,5] = ",  sum_of_list(range(6))
+
+
+Fle 2: myscript.py
+
+    import adding_numbers
+
+    print(adding_numbers.sum_of_list(range(17)))
+
+
+...if you want to add numbers you would of course not write such a function but use sum or numpy.sum ;-)
